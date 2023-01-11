@@ -34,11 +34,11 @@ public class CrmOrderController {
     public void createOrder(@RequestBody Order order) {
         crmOrderService.addOrder(order);
     }
-//
-//    @DeleteMapping("client/{id}")
-//    public void deleteClient(@PathVariable Integer id) {
-//        crmClientService.deleteClientById(id);
-//    }
+
+    @DeleteMapping("order/{id}")
+    public void deleteOrder(@PathVariable Integer id) {
+        crmOrderService.deleteOrderById(id);
+    }
 //
 //    @PutMapping("client/{id}")
 //    public void updateClient(@PathVariable Integer id, @RequestBody Client client) {
