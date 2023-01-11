@@ -14,7 +14,7 @@ public class CrmClientService {
     @Autowired
     ClientRepository clientRepository;
 
-    public void addCLient(Client client) {
+    public void addClient(Client client) {
         clientRepository.save(client);
     }
 
