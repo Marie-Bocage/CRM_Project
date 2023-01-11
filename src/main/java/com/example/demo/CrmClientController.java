@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import jakarta.persistence.criteria.CriteriaBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -33,5 +34,10 @@ public class CrmClientController {
     @PostMapping("clients")
     public void createClient(@RequestBody Client client) {
         crmClientService.addClient(client);
+    }
+
+    @DeleteMapping("client/{id}")
+    public void deleteClient(@PathVariable Integer id) {
+        crmClientService.deleteClientById(id);
     }
 }
