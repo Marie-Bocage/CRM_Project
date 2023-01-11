@@ -1,4 +1,4 @@
-package com.crm.model;
+package com.example.demo;
 
 import jakarta.persistence.*;
 

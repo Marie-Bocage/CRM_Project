@@ -1,7 +1,5 @@
-package com.service;
+package com.example.demo;
 
-import com.crm.model.Order;
-import com.crm.model.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
