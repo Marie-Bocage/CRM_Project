@@ -16,12 +16,12 @@ public class CrmOrderController {
     CrmOrderService crmOrderService;
 
     @GetMapping("orders")
-    public List<Order>  getAllClients() {
+    public List<Order>  getAllOrders() {
         return crmOrderService.getOrders();
     }
 
     @GetMapping("orders/{id}")
-    public ResponseEntity getOneClient(@PathVariable Integer id) {
+    public ResponseEntity getOneOrder(@PathVariable Integer id) {
         Optional<Order> optional = crmOrderService.getOrderById(id);
         if(optional.isEmpty()) {
             return ResponseEntity.notFound().build();
@@ -30,10 +30,10 @@ public class CrmOrderController {
         }
     }
 
-//    @PostMapping("clients")
-//    public void createClient(@RequestBody Client client) {
-//        crmClientService.addClient(client);
-//    }
+    @PostMapping("orders")
+    public void createOrder(@RequestBody Order order) {
+        crmOrderService.addOrder(order);
+    }
 //
 //    @DeleteMapping("client/{id}")
 //    public void deleteClient(@PathVariable Integer id) {
