@@ -29,4 +29,9 @@ public class CrmClientController {
             return ResponseEntity.ok(optional.get());
         }
     }
+
+    @PostMapping("clients")
+    public void createClient(@RequestBody Client client) {
+        crmClientService.addClient(client);
+    }
 }
