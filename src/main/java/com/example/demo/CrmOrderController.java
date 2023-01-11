@@ -39,9 +39,9 @@ public class CrmOrderController {
     public void deleteOrder(@PathVariable Integer id) {
         crmOrderService.deleteOrderById(id);
     }
-//
-//    @PutMapping("client/{id}")
-//    public void updateClient(@PathVariable Integer id, @RequestBody Client client) {
-//        crmClientService.updateClient(id, client);
-//    }
+
+    @PutMapping("order/{id}")
+    public void updateOrder(@PathVariable Integer id, @RequestBody Order order) {
+        crmOrderService.updateOrder(id, order);
+    }
 }
