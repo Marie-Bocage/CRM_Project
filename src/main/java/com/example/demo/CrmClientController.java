@@ -40,4 +40,9 @@ public class CrmClientController {
     public void deleteClient(@PathVariable Integer id) {
         crmClientService.deleteClientById(id);
     }
+
+    @PutMapping("client/{id}")
+    public void updateClient(@PathVariable Integer id, @RequestBody Client client) {
+        crmClientService.updateClient(id, client);
+    }
 }
